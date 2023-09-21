@@ -4,6 +4,8 @@
 
 /*https://medium.com/codingthesmartway-com-blog/how-to-use-tailwind-css-with-react-9dd78bbdc0e0*/
 
-body {
-    padding: 1rem;
+@layer base {
+  body {
+    @apply bg-indigo-900 p-3
+  }
 }

@@ -27,20 +27,21 @@ const Character = (props) => {
 
   return (
     <div>
-      <div className="relative">
-        <img src={characterImage}
-             alt={character.ShortName}
-             className="bg-amber-500 pb-5 pt-5" />
-        <div className="absolute top-5 left-5">
-          <h1 className="text-3xl">{character.LongName}</h1>
-          <ul className="list-disc pl-5">
-            <li className="text-base">{character.FightingStyle}</li>
-            <li className="text-base">{character.Nationality}</li>
-            <li className="text-base">{character.Height}cm</li>
-            <li className="text-base">{character.Weight}kg</li>
-            <li className="text-base">{character.Gender === "m" ? "Male" : "Female"}</li>
-          </ul>
+      <div>
+        <h1 className="text-3xl">{character.LongName}</h1>
+        <div className="p-5 h-50">
+          <img src={characterImage}
+               alt={character.ShortName}
+               className={character.ShortName === "Yoshimitsu" ? "-ml-3" : "-ml-20 h-full"}
+          />
         </div>
+        <ul className="list-disc pl-5">
+          <li className="text-base">{character.FightingStyle}</li>
+          <li className="text-base">{character.Nationality}</li>
+          <li className="text-base">{character.Height}cm</li>
+          <li className="text-base">{character.Weight}kg</li>
+          <li className="text-base">{character.Gender === "m" ? "Male" : "Female"}</li>
+        </ul>
       </div>
     </div>
   );

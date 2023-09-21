@@ -15,7 +15,7 @@ const CharacterSelector = (props) => {
   }, [props.characters]);
 
   return (
-    <div className="bg-fuchsia-300">
+    <div>
       <div className="p-3">
         <label htmlFor="character" className="pr-1">Select a character:</label>
         <select name="character"
