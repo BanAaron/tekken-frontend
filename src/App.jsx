@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import CharacterSelector from "./CharacterSelector";
-import { useEffect, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -15,15 +15,24 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Tekken 8 Frame Data</h1>
-      <CharacterSelector
-        characters={characters}
-      />
-    </div>
+    <>
+      <header>
+        <div className="bg-amber-200">
+          <h1 className="text-5xl text-center">Frame Data</h1>
+          <p className="text-center text-l">I am a dragon!</p>
+        </div>
+      </header>
+      <div>
+        <CharacterSelector characters={characters} />
+      </div>
+    </>
   );
 };
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
