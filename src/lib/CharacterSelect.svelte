@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { api } from '$lib/vars';
 
 	type Character = {
 		Id: number;
@@ -16,9 +17,8 @@
 
 	onMount(async () => {
 		try {
-			const response = await fetch('http://localhost:8888/api/character');
+			const response = await fetch(api.character);
 			characters = await response.json();
-			console.log(characters);
 		} catch (error) {
 			console.error(error);
 		}
