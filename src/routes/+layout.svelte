@@ -5,6 +5,6 @@
 	import '@fontsource/inter';
 </script>
 
-<div id="container" class="w-auto h-screen bg-black text-gray-50">
+<div id="container" class="w-auto h-screen text-gray-50">
 	<slot />
 </div>
